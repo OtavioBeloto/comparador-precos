@@ -51,7 +51,7 @@ class TerabyteScraper(BaseScraper):
 
             print(f"\n[DEBUG] Encontrou {len(cards)} cards na tela!")
 
-            for card in cards[:5]:
+            for card in cards[:10]:
                 try:
                     # Link e nome: o <a> com class product-item__name tem o title completo
                     link_elemento = card.find_element(By.CSS_SELECTOR, "a.product-item__name")
@@ -84,3 +84,9 @@ class TerabyteScraper(BaseScraper):
     def _formatar_preco(self, preco_str):
         preco_limpo = preco_str.replace("R$", "").replace(".", "").replace(",", ".").strip()
         return float(preco_limpo)
+
+    def abre_link(self, link):
+        chrome_options = Options()
+        chrome_options.binary_location = self.brave_path
+        driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=chrome_options)
+        driver.get(link)
