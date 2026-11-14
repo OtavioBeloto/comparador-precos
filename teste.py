@@ -1,4 +1,4 @@
-from scr.scrapper import TerabyteScraper
+from scr.scraper import TerabyteScraper
 
 def testar():
     print("Inicializando o scraper da Terabyte...")

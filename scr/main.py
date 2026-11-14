@@ -1,4 +1,4 @@
-from scr.scrapper import TerabyteScrapper
+from scr.scraper import TerabyteScraper
 from scr.gui import AppComparador
 import tkinter as tk
 
