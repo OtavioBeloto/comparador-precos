@@ -22,7 +22,7 @@ Um aplicativo desktop desenvolvido em Python com interface gráfica (Tkinter) e 
 ---
 
 ## 📸 Demonstração
-
+./assets/print-app.png
 
 🛠️ Tecnologias Utilizadas
 
@@ -80,4 +80,3 @@ python -m src.main
 👤 Autor
 
 Feito por Otavio Beloto
-GitHub (https://img.shields.io/badge/GitHub-Perfil-black?styletps://github.com/OtavioBeloto)
