@@ -22,7 +22,7 @@ Um aplicativo desktop desenvolvido em Python com interface gráfica (Tkinter) e 
 ---
 
 ## 📸 Demonstração
-./assets/print-app.png
+./assets/screenshot.jpg
 
 🛠️ Tecnologias Utilizadas
 
