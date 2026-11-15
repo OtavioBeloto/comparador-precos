@@ -1,7 +1,7 @@
 import tkinter as tk
 from tkinter import ttk, messagebox
 import threading
-from scr.scraper import TerabyteScraper
+from scr.scraper import TerabyteScraper, PichauScraper, KabumScraper
 import webbrowser
 
 class AppComparador:
@@ -93,6 +93,16 @@ class AppComparador:
             teranbyte = TerabyteScraper()
             produtos_terabyte = teranbyte.buscar(termo)
             resultados_totais.extend(produtos_terabyte)
+
+            self.label_status.config(text="Buscando na Pichau...")
+            pichau = PichauScraper()
+            produtos_pichau = pichau.buscar(termo)
+            resultados_totais.extend(produtos_pichau)
+
+            self.label_status.config(text="Buscando na Kabum...")
+            pichau = KabumScraper()
+            produtos_kabum = pichau.buscar(termo)
+            resultados_totais.extend(produtos_kabum)
 
             self.root.after(0, lambda: self.atualizar_tabela(resultados_totais))
 
